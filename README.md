@@ -7,6 +7,8 @@ These have been tested in Chrome.
 - Open the **Tampermonkey** extension
 - Go to the **Utilities** tab
 - Copy URL that you want to add the URL and click on the **Import** button
+  - The scripts are linked to the file below
+  - If you intend to use the code browser (in github), you will need to copy the raw file url.
 - Click on the **Install** button
 
 ## BMS extra buttons
