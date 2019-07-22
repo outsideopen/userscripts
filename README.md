@@ -21,7 +21,7 @@ This creates a "Markdown URL" button, that creates a link that looks like the fo
 
 `[client :: title](https://bms.example.com/MSP/TicketEdit.aspx?ID=####)`
 
-### [BMS Markdown URL button](https://raw.githubusercontent.com/outsideopen/userscripts/master/bms-short-url.js)
+### [BMS Short URL button](https://raw.githubusercontent.com/outsideopen/userscripts/master/bms-short-url.js)
 
 This creates "Short URL" button that creates a link that is a little more suitable for Slack.
 
