@@ -13,7 +13,7 @@ These have been tested in Chrome.
 
 ![BMS URL buttons](/screenshots/bms-extra-buttons.png)
 
-### BMS Markdown URL button
+### [BMS Markdown URL button](/blob/master/bms-markdown-url.js)
 
 This creates a "Markdown URL" button, that creates a link that looks like the following:
 
