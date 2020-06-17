@@ -10,7 +10,7 @@
 
 (function() {
     'use strict';
-var newtitle = document.title;
-newtitle = newtitle.replace('Outside Open - ','');
-document.title = newtitle;
+    var newtitle = document.title;
+    newtitle = newtitle.replace('Outside Open - ','');
+    document.title = newtitle;
 })();
