@@ -35,3 +35,7 @@ Creates an *audio* element on the **Ticket View** tab that allows you to play
 any attached mp3's.
 
 ![BMS MP3 Attachment Player](/screenshots/bms-play-mp3.png)
+
+## BMS Short Title ##
+
+Removes "Outside Open - " from the Page title, making more details visible on open tabs.
