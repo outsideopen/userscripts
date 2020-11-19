@@ -38,4 +38,4 @@ any attached mp3's.
 
 ## [BMS Short Title](https://github.com/outsideopen/userscripts/blob/master/bms-short-title.js)
 
-Removes "Outside Open - " or "Outside Open - Ticket#" from the Page title, making tabs easier to read.
+Removes "Company Name - " or "Company Name - Ticket#" from the Page title, making tabs easier to read and find.
