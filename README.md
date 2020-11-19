@@ -36,10 +36,6 @@ any attached mp3's.
 
 ![BMS MP3 Attachment Player](/screenshots/bms-play-mp3.png)
 
-## [BMS Short Title - Tickets](https://github.com/outsideopen/userscripts/blob/master/bms-short-title-tickets.js)
+## BMS Short Title ##
 
-Removes "Outside Open - Ticket#" from the Page title, making more details visible on open tabs.
-
-## [BMS Short Title](https://github.com/outsideopen/userscripts/blob/master/bms-short-title.js)
-
-Removes "Outside Open - " from the Page title on other pages like CRM, Timesheet, etc.
+Removes "Outside Open - " from the Page title, making more details visible on open tabs.
