@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Kaseya BMS Short Title
 // @namespace    https://github.com/outsideopen/userscripts
-// @version      0.3
+// @version      0.4
 // @description  Removes 'Company Name - Ticket#' or 'Company Name - ' from Title on BMS Pages
 // @author       Andy Rusch <arusch@outsideopen.com>
 // @match        https://bms.kaseya.com/*
@@ -19,7 +19,7 @@
     else {
         var newtitle = document.title;
         //Replace up to and including ' - ' to remove company name from the title on non ticket pages
-        newtitle = newtitle.replace(/.* - /,'');
+        newtitle = newtitle.replace(/ - .*$/, '');
         document.title = newtitle;
     }
 })();
