@@ -36,6 +36,6 @@ any attached mp3's.
 
 ![BMS MP3 Attachment Player](/screenshots/bms-play-mp3.png)
 
-## [BMS Short Title](https://github.com/outsideopen/userscripts/blob/master/bms-short-title.js)
+## [BMS Short Title](https://raw.githubusercontent.com/outsideopen/userscripts/master/bms-short-title.js)
 
 Removes "Company Name - " or "Company Name - Ticket#" from the Page title, making tabs easier to read and find.
