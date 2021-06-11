@@ -1,10 +1,10 @@
 // ==UserScript==
 // @name         BMS Short URL button
 // @namespace    https://github.com/outsideopen/userscripts
-// @version      0.2
+// @version      0.3
 // @description  adds a "Short URL" button to the buttons on a ticket
 // @author       David Lundgren <dlundgren@outsideopen.com>
-// @match        https://bms.kaseya.com/MSP/*
+// @match        https://bms.kaseya.com/react/servicedesk/tickets/*
 // @grant        none
 // ==/UserScript==
 
@@ -71,11 +71,21 @@
 	var clip = new TrelloClipboard();
 	function copy_to_clipboard()
 	{
-		var newURL = window.location.protocol + "//" + window.location.host + "/" + window.location.pathname;
-		var client = document.querySelector('.itg-org').innerText
-		var title = document.querySelector('.TicketTitle em span').innerText.replace(/^Ticket# /, '').replace(/\s+/ig,' ');
+		// detect if we are on legacy or react
+		var titleSelector = '.psa-ticket-view-title';
+		var clientSelector = '.psa-ticket-info-summary-account';
+		var path = window.location.pathname;
+		if (window.location.pathname.search(/\/MSP\//) !== -1) {
+			titleSelector  = '.TicketTitle em span';
+			clientSelector = '.itg-org';
+			path           = path + "?ID=" + parseAspNetFormActionVariable('ID');
+		}
 
-		clip.setValue(newURL + "?ID=" + parseAspNetFormActionVariable('ID') + " [" + client + ' :: ' + title + "]");
+		var newURL = window.location.protocol + "//" + window.location.host + path;
+		var client = document.querySelector(clientSelector).innerText;
+		var title = document.querySelector(titleSelector).innerText.replace(/\s+/ig,' ');
+
+		clip.setValue(newURL + " [" + client + ' :: ' + title + "]");
 		document.execCommand('copy');
 	}
 
@@ -86,7 +96,7 @@
 			copy_to_clipboard();
 		}
 	};
-	jQuery('#ctl00_phMenu_pnlGroupActionButtons').append('<button id="custom-button-shorturl" class="btn btn-sm btn-primary">Short URL</a>');
+	jQuery('#createTicket').append('<a id="custom-button-shorturl" class="btn btn-sm btn-primary QuickAddButton">Short URL</a>');
 	jQuery('#custom-button-shorturl').on('click', function(e) {
 		e.preventDefault();
 		copy_to_clipboard();
