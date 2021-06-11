@@ -71,9 +71,19 @@
 	var clip = new TrelloClipboard();
 	function copy_to_clipboard()
 	{
-		var newURL = window.location.protocol + "//" + window.location.host + window.location.pathname;
-		var client = document.querySelector('.psa-ticket-info-summary-account').innerText
-		var title = document.querySelector('.psa-ticket-view-title').innerText.replace(/\s+/ig,' ');
+		// detect if we are on legacy or react
+		var titleSelector = '.psa-ticket-view-title';
+		var clientSelector = '.psa-ticket-info-summary-account';
+		var path = window.location.pathname;
+		if (window.location.pathname.search(/\/MSP\//) !== -1) {
+			titleSelector  = '.TicketTitle em span';
+			clientSelector = '.itg-org';
+			path           = path + "?ID=" + parseAspNetFormActionVariable('ID');
+		}
+
+		var newURL = window.location.protocol + "//" + window.location.host + path;
+		var client = document.querySelector(clientSelector).innerText;
+		var title = document.querySelector(titleSelector).innerText.replace(/\s+/ig,' ');
 
 		clip.setValue(newURL + " [" + client + ' :: ' + title + "]");
 		document.execCommand('copy');
