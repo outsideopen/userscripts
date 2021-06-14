@@ -5,8 +5,7 @@
 // @description  adds a "Short URL" button to the buttons on a ticket
 // @author       David Lundgren <dlundgren@outsideopen.com>
 // @match        https://bms.kaseya.com/MSP/*
-// @match        https://bms.kaseya.com/react/servicedesk/tickets*
-// @match        https://bms.kaseya.com/react/servicedesk/mytickets*
+// @match        https://bms.kaseya.com/react/servicedesk/*
 // @grant        none
 // ==/UserScript==
 
