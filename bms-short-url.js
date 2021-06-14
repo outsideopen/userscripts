@@ -1,10 +1,11 @@
 // ==UserScript==
 // @name         BMS Short URL button
 // @namespace    https://github.com/outsideopen/userscripts
-// @version      0.3
+// @version      0.4
 // @description  adds a "Short URL" button to the buttons on a ticket
 // @author       David Lundgren <dlundgren@outsideopen.com>
-// @match        https://bms.kaseya.com/react/servicedesk/tickets/*
+// @match        https://bms.kaseya.com/MSP/*
+// @match        https://bms.kaseya.com/react/servicedesk/*
 // @grant        none
 // ==/UserScript==
 
