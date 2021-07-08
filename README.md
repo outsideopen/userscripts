@@ -1,12 +1,12 @@
 #  Userscripts
 
-These have been tested in Chrome.
+These have been tested in Chrome and Firefox.
 
 ## Installation
 
 - Open the **Tampermonkey** extension
 - Go to the **Utilities** tab
-- Copy URL to the script that you want to add the **URL** input and click on the **Import** button
+- Copy URL of the script that you want to add the **URL** input and click on the **Import** button
   - The scripts are linked below on their header names
   - If you intend to use the code browser (in github), you will need to copy the raw file url.
 - Click on the **Install** button
