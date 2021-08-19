@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         BMS Short URL button
 // @namespace    https://github.com/outsideopen/userscripts
-// @version      0.5
+// @version      0.6
 // @description  adds a "Short URL" button to the buttons on a ticket
 // @author       David Lundgren <dlundgren@outsideopen.com>
 // @match        https://bms.kaseya.com/MSP/*
@@ -76,7 +76,7 @@
 		// detect if we are on legacy or react
 		var titleSelector = '.psa-ticket-view-title';
 		var clientSelector = '.psa-ticket-info-summary-account';
-		var path = window.location.pathname;
+		var path = window.location.pathname.replace(/\/home\/views\/[0-9]+\/(my)?tickets/, "/servicedesk/tickets");
 		if (window.location.pathname.search(/\/MSP\//) !== -1) {
 			titleSelector  = '.TicketTitle em span';
 			clientSelector = '.itg-org';
