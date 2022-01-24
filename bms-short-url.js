@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         BMS Short URL button
 // @namespace    https://github.com/outsideopen/userscripts
-// @version      0.6
+// @version      0.7
 // @description  adds a "Short URL" button to the buttons on a ticket
 // @author       David Lundgren <dlundgren@outsideopen.com>
 // @match        https://bms.kaseya.com/MSP/*
@@ -98,7 +98,13 @@
 			copy_to_clipboard();
 		}
 	};
-	jQuery('#createTicket').append('<a id="custom-button-shorturl" class="btn btn-sm btn-primary QuickAddButton">Short URL</a>');
+	
+	var createTicketButton = jQuery('#createTicket')
+	if (createTicketButton.length > 0) {
+		createTicketButton = jQuery('.createTicket');
+	}
+
+	createTicketButton.append('<a id="custom-button-shorturl" class="btn btn-sm btn-primary QuickAddButton">Short URL</a>');
 	jQuery('#custom-button-shorturl').on('click', function(e) {
 		e.preventDefault();
 		copy_to_clipboard();
