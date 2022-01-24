@@ -98,7 +98,13 @@
 			copy_to_clipboard();
 		}
 	};
-	jQuery('#createTicket').append('<a id="custom-button-shorturl" class="btn btn-sm btn-primary QuickAddButton">Short URL</a>');
+	
+	var createTicketButton = jQuery('#createTicket')
+	if (createTicketButton.length > 0) {
+		createTicketButton = jQuery('.createTicket');
+	}
+
+	createTicketButton.append('<a id="custom-button-shorturl" class="btn btn-sm btn-primary QuickAddButton">Short URL</a>');
 	jQuery('#custom-button-shorturl').on('click', function(e) {
 		e.preventDefault();
 		copy_to_clipboard();
