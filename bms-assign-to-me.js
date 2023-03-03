@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         BMS Assign To Me button
 // @namespace    https://github.com/outsideopen/userscripts
-// @version      0.2
+// @version      0.1.2
 // @description  adds "Assign To Me" button to the buttons on a ticket
 // @author       David Lundgren <dlundgren@outsideopen.com>
 // @match        https://bms.kaseya.com/MSP/*
@@ -68,7 +68,7 @@
 			  .done(() => {
 				  jQuery('.psa-label-field:contains(\'Assignee\')').each((idx, el) => {
 					  if (el.innerHTML === 'Assignee') {
-						  Query(jQuery(el).siblings()[0]).find('span')[0].textContent = psa_user.fullName;
+						  jQuery(jQuery(el).siblings()[0]).find('span')[0].textContent = psa_user.fullName;
 					  }
 				  });
 			  })
