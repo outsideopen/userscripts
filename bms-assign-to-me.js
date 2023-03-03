@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         BMS Assign To Me button
 // @namespace    https://github.com/outsideopen/userscripts
-// @version      0.1
+// @version      0.2
 // @description  adds "Assign To Me" button to the buttons on a ticket
 // @author       David Lundgren <dlundgren@outsideopen.com>
 // @match        https://bms.kaseya.com/MSP/*
@@ -50,7 +50,7 @@
 		e.preventDefault();
 		jQuery.ajax({
 						type    : 'PATCH',
-						url     : `https://bms.kaseya.com/api2/v2/servicedesk/tickets/${ticket_id}`,
+						url     : `https://bms.kaseya.com/api2/v2/servicedesk/tickets/${resolveTicketId()}`,
 						dataType: 'json',
 						headers : {
 							Authorization : `Bearer ${jQuery.cookie('PSAAuthToken')}`,
