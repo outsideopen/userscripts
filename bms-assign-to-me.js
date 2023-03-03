@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         BMS Assign To Me button
 // @namespace    https://github.com/outsideopen/userscripts
-// @version      0.1.2
+// @version      0.1.3
 // @description  adds "Assign To Me" button to the buttons on a ticket
 // @author       David Lundgren <dlundgren@outsideopen.com>
 // @match        https://bms.kaseya.com/MSP/*
