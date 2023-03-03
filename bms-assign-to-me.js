@@ -71,6 +71,12 @@
 						  jQuery(jQuery(el).siblings()[0]).find('span')[0].textContent = psa_user.fullName;
 					  }
 				  });
+
+				  // handle legacy UI update
+				  var legacy = jQuery('#ctl00_phContent_lblVPrimaryAssignee');
+				  if (legacy.length > 0) {
+					  legacy[0].textContent= psa_user.fullName;
+				  }
 			  })
 			  .fail(() => {
 				  // should likely check the result code to reload the auth token.
